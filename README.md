@@ -1,9 +1,7 @@
-# EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+# EXPERIMENT 01 Execute Assembly Language Programming on fundamental arithmetic and logical operations using 8086
+Name : Thanushree Vijayakanth
 
-
+Register no : 212224110054
 
 
 
@@ -15,19 +13,19 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
  ## Running the Emulator :
 1.	Download and install emu8086 (www.emu8086.com) It is usually installed in C:\EMU8086 subfolder in the “Windows” directory
-2.	  Run  emu8086 icon (on the desktop or in the c:\EMU8086 folder of window) It has green color 
+2.	Run  emu8086 icon (on the desktop or in the c:\EMU8086 folder of window) It has green color 
  
  
-3.		write the code for the appropriate program for ADDITION,SUBTRACTION, MULTIPLICATION,  DIVISION operations 
+3.	Write the code for the appropriate program for ADDITION,SUBTRACTION, MULTIPLICATION,  DIVISION operations 
 
-4.	 Compile the program and check for the errors 
+4.	Compile the program and check for the errors 
 5.	Run (once there is no syntax error) 
 
 6.	Click OK to see/view the output of your program on the Emulator screen. 
 
 
 7.	After running the program, another menu screen will be displayed, where you have the option to “View” symbol table,
-8.	 
+   
 
 
 ![image](https://user-images.githubusercontent.com/36288975/189273263-d65baae9-4b8f-4723-afb3-c0ffa4052b04.png)
@@ -75,28 +73,59 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 
-## Programs for arithmetic  operations
+## Program for arithmetic  operations
+```
+org 100h
 
-## Addition  of 8 bit ALP 
+mov ax,4535h
+mov bx,733fh
+add ax,bx    
+mov [1000h],ax
+sub bx,ax
+mov [1002h],bx
+mul bx
+mov [1004h],ax   
+div bx
+mov [1006h],ax
+
+ret
+```
+
+## Output of Arithmetic Operations 
+<img width="1586" height="658" alt="image" src="https://github.com/user-attachments/assets/3eddcbaf-c5a2-4088-8f63-d1a6358c2b50" />
 
 
+## Program for Logical Operations
+```
+org 100h
 
-## Output  
- 
-## Subtraction   of 8 bit numbers  ALP 
- 
-## Output  
-## Multiplication alp 
- ## Output  
+mov ax,2345h
+mov bx,1111h
+and ax,bx       
+mov [2000h],ax
 
+mov ax,2345h
+or ax,bx
+mov [2002h],ax
 
-## Division alp 
+mov ax,2345h
+xor ax,bx
+mov [2004h],ax
 
-## Output  
+mov ax,2345h
+not ax
+mov [2006h],ax
 
+ret
+```
+
+## Output of Logical Operations 
+
+<img width="1518" height="590" alt="image" src="https://github.com/user-attachments/assets/59cc83e4-5712-4d39-b3ff-2fd93782e3d9" />
 
 ## Result :
- 
+
+The program was executed successfully.
 
 
 
